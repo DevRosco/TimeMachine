@@ -3,7 +3,7 @@
 Timer timer;
 DateTime DateTime;
 
- void something()
+ void TikTak()
 {
  timer = new Timer(TimerCallback, null,0,1000);
 }
@@ -16,6 +16,6 @@ DateTime DateTime;
     Console.WriteLine(DateTime);
  }
 
-something();
+TikTak();
 
 Console.Read();

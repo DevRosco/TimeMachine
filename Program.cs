@@ -1,25 +1,21 @@
 ﻿//Time Machine 
-Timer timer;
 
+Timer timer;
 DateTime DateTime;
+
  void something()
 {
- timer = new Timer(TimerCallback, null,1000,1000);
-
+ timer = new Timer(TimerCallback, null,0,1000);
 }
-
-
 
  void TimerCallback(object state)
-{
+ {
+    Console.Clear();
     DateTime = DateTime.Now;
-    Console.WriteLine(DateTime);
-    GC.Collect();
- 
-   
-}
-
     Console.WriteLine("Timer");
+    Console.WriteLine(DateTime);
+ }
+
 something();
 
 Console.Read();

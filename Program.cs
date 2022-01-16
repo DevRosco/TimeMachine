@@ -1,6 +1,7 @@
 ﻿//Time Machine 
 Timer timer;
 
+DateTime DateTime;
  void something()
 {
  timer = new Timer(TimerCallback, null,1000,1000);
@@ -9,15 +10,16 @@ Timer timer;
 
 
 
- void TimerCallback(object o)
+ void TimerCallback(object state)
 {
-    Console.WriteLine("hello world");
+    DateTime = DateTime.Now;
+    Console.WriteLine(DateTime);
     GC.Collect();
  
    
 }
 
-    Console.WriteLine("where what");
+    Console.WriteLine("Timer");
 something();
 
 Console.Read();
